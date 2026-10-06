@@ -209,21 +209,6 @@
 
     .project-card p {
       color: #666;
-      margin-bottom: 20px;
-    }
-
-    .project-btn {
-      display: inline-block;
-      padding: 9px 20px;
-      background: #2563eb;
-      color: white;
-      text-decoration: none;
-      border-radius: 20px;
-      transition: 0.3s;
-    }
-
-    .project-btn:hover {
-      background: #1d4ed8;
     }
 
     .contact {
@@ -445,7 +430,9 @@
 
               <div className="project-card">
 
-                
+                <div className="project-icon">
+                  💻
+                </div>
 
                 <h3>
                   Personal Portfolio Website
@@ -457,13 +444,13 @@
                   as an Information Technology student.
                 </p>
 
-               
-
               </div>
 
               <div className="project-card">
 
-               
+                <div className="project-icon">
+                  🌐
+                </div>
 
                 <h3>
                   Web Development Project
@@ -475,13 +462,13 @@
                   fundamentals.
                 </p>
 
-                
-
               </div>
 
               <div className="project-card">
 
-                
+                <div className="project-icon">
+                  🏫
+                </div>
 
                 <h3>
                   NVSU Website
@@ -493,11 +480,29 @@
                   HTML, CSS, JavaScript, and web application development.
                 </p>
 
-                
+              </div>
+
+              <div className="project-card">
+
+                <div className="project-icon">
+                  🚀
+                </div>
+
+                <h3>
+                  Future Project
+                </h3>
+
+                <p>
+                  Future projects where I can apply my growing
+                  programming knowledge and create useful and
+                  innovative solutions.
+                </p>
 
               </div>
 
-              
+            </div>
+
+          </section>
 
           <section className="contact" id="contact">
 
@@ -514,7 +519,7 @@
               className="btn"
               onClick={showMessage}
             >
-              Say Hello!!!
+              Say Hello 👋
             </button>
 
             {message && (
