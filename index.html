@@ -6,6 +6,13 @@
 
   <title>Hanz Cagungao Personal Profile</title>
 
+  <!-- React.js -->
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+  <!-- Babel allows JSX to work in the browser -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
   <style>
     * {
       margin: 0;
@@ -108,6 +115,9 @@
       text-decoration: none;
       border-radius: 30px;
       transition: 0.3s;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
     }
 
     .btn:hover {
@@ -295,234 +305,284 @@
 
 <body>
 
-  <!-- Navigation -->
-  <nav>
-    <div class="logo">Hanz Cagungao</div>
+  <!-- React will display the website here -->
+  <div id="root"></div>
 
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
 
+  <!-- React + JavaScript -->
+  <script type="text/babel">
 
-  <!-- Hero Section -->
-  <section class="hero" id="home">
+    // React component
+    function Portfolio() {
 
-    <div class="hero-content">
+      // JavaScript state
+      const [message, setMessage] = React.useState("");
 
-      <img 
-        src="hanz.jpg.webp"
-        alt="Hanz Christian Cagungao"
-        class="profile-image"
-      >
+      // JavaScript function
+      function showMessage() {
+        setMessage("Thank you for visiting my portfolio! 🚀");
+      }
 
-      <h1>Hi, I'm Hanz!</h1>
+      return (
+        <>
 
-      <h2>A Student With a Big Dream</h2>
+          {/* Navigation */}
+          <nav>
+            <div className="logo">Hanz Cagungao</div>
 
-      <p>
-        Welcome to my personal website. I'm passionate about what I do,
-        constantly learning new things, and creating meaningful work
-        that makes a difference.
-      </p>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#skills">Skills</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </nav>
 
-      <a href="#about" class="btn">Discover More</a>
 
-    </div>
+          {/* Hero Section */}
+          <section className="hero" id="home">
 
-  </section>
+            <div className="hero-content">
 
+              <img
+                src="hanz.jpg.webp"
+                alt="Hanz Christian Cagungao"
+                className="profile-image"
+              />
 
-  <!-- About Section -->
-  <section id="about">
+              <h1>Hi, I'm Hanz!</h1>
 
-    <h2 class="section-title">About Me</h2>
+              <h2>A Student With a Big Dream</h2>
 
-    <div class="about">
+              <p>
+                Welcome to my personal website. I'm passionate about
+                technology, constantly learning new things, and creating
+                meaningful work that makes a difference.
+              </p>
 
-      <p>
-        Hello! I'm <strong>Hanz Christian C. Cagungao</strong>.
-        A 20-year-old Bachelor of Science in Information Technology student
-        with a passion for technology, creativity, and continuous learning.
-        I am a motivated and passionate individual with a strong interest
-        in <strong>the IT Industry</strong>.
-      </p>
+              <a href="#about" className="btn">
+                Discover More
+              </a>
 
-      <br>
+            </div>
 
-      <p>
-        I enjoy learning, solving problems, meeting new people, and
-        turning ideas into meaningful results. My goal is to continue
-        growing personally and professionally while contributing
-        positively to the people and communities around me.
-      </p>
+          </section>
 
-      <br>
 
-      <p>
-        I am a motivated and curious person who enjoys exploring new
-        technologies and developing my skills. I believe that every
-        challenge is an opportunity to learn and improve.
-      </p>
+          {/* About */}
+          <section id="about">
 
-      <br>
+            <h2 className="section-title">About Me</h2>
 
-      <p>
-        Although I am still building my experience,
-        I am always willing to learn, adapt,
-        and take on new challenges.
-      </p>
+            <div className="about">
 
-      <br>
+              <p>
+                Hello! I'm <strong>Hanz Christian C. Cagungao</strong>,
+                a 20-year-old Bachelor of Science in Information Technology
+                student with a passion for technology, creativity, and
+                continuous learning.
+              </p>
 
-      <p>
-        My goal is to become a skilled and successful IT professional
-        who can use technology to create useful solutions and make a
-        positive impact. I am excited to continue growing, gaining
-        experience, and turning my ideas into reality.
-      </p>
+              <br />
 
-    </div>
+              <p>
+                I enjoy learning, solving problems, meeting new people,
+                and turning ideas into meaningful results. I believe that
+                every challenge is an opportunity to learn and improve.
+              </p>
 
-  </section>
+              <br />
 
+              <p>
+                Although I am still building my experience, I am always
+                willing to learn, adapt, and take on new challenges.
+              </p>
 
-  <!-- Skills Section -->
-  <section class="skills" id="skills">
+              <br />
 
-    <h2 class="section-title">My Skills</h2>
+              <p>
+                My goal is to become a skilled IT professional who can
+                use technology to create useful solutions and make a
+                positive impact.
+              </p>
 
-    <div class="skill-container">
+            </div>
 
-      <div class="skill">
-        <h3>Technology</h3>
-        <p>Web development, programming and digital tools.</p>
-      </div>
+          </section>
 
-      <div class="skill">
-        <h3>Creativity</h3>
-        <p>Creative thinking, design and problem solving.</p>
-      </div>
 
-      <div class="skill">
-        <h3>Communication</h3>
-        <p>Clear communication and teamwork.</p>
-      </div>
+          {/* Skills */}
+          <section className="skills" id="skills">
 
-      <div class="skill">
-        <h3>Sports</h3>
-        <p>Swimming, basketball, badminton and cycling.</p>
-      </div>
+            <h2 className="section-title">My Skills</h2>
 
-    </div>
+            <div className="skill-container">
 
-  </section>
+              <div className="skill">
+                <h3>Technology</h3>
+                <p>
+                  Web development, programming and digital tools.
+                </p>
+              </div>
 
+              <div className="skill">
+                <h3>Creativity</h3>
+                <p>
+                  Creative thinking, design and problem solving.
+                </p>
+              </div>
 
-  <!-- Projects Section -->
-  <section class="projects" id="projects">
+              <div className="skill">
+                <h3>Communication</h3>
+                <p>
+                  Clear communication and teamwork.
+                </p>
+              </div>
 
-    <h2 class="section-title">My Projects</h2>
+              <div className="skill">
+                <h3>Sports</h3>
+                <p>
+                  Swimming, basketball, badminton and cycling.
+                </p>
+              </div>
 
-    <div class="project-container">
+            </div>
 
-      <!-- Project 1 -->
-      <div class="project-card">
-        <div class="project-icon">💻</div>
+          </section>
 
-        <h3>Personal Website</h3>
 
-        <p>
-          A personal portfolio website created to introduce myself,
-          showcase my skills, and share my journey as an IT student.
-        </p>
+          {/* Projects */}
+          <section className="projects" id="projects">
 
-        <a href="#" class="project-btn">View Project</a>
-      </div>
+            <h2 className="section-title">My Projects</h2>
 
+            <div className="project-container">
 
-      <!-- Project 2 -->
-      <div class="project-card">
-        <div class="project-icon">🌐</div>
+              <div className="project-card">
 
-        <h3>Web Development Project</h3>
+                <div className="project-icon">💻</div>
 
-        <p>
-          A simple web development project created while learning
-          HTML, CSS, and the fundamentals of building websites.
-        </p>
+                <h3>Personal Website</h3>
 
-        <a href="#" class="project-btn">View Project</a>
-      </div>
+                <p>
+                  A personal portfolio website created to introduce
+                  myself and showcase my skills as an IT student.
+                </p>
 
+                <a href="#home" className="project-btn">
+                  View Project
+                </a>
 
-      <!-- Project 3 -->
-      <div class="project-card">
-        <div class="project-icon">🚀</div>
+              </div>
 
-        <h3>Future Project</h3>
 
-        <p>
-          A future project where I plan to apply my growing
-          programming and IT skills to create something useful
-          and innovative.
-        </p>
+              <div className="project-card">
 
-        <a href="#" class="project-btn">Coming Soon</a>
-      </div>
+                <div className="project-icon">🌐</div>
 
-    </div>
+                <h3>Web Development</h3>
 
-  </section>
+                <p>
+                  A simple website created while learning HTML,
+                  CSS, JavaScript, and web development.
+                </p>
 
+                <a href="#projects" className="project-btn">
+                  View Project
+                </a>
 
-  <!-- Contact Section -->
-  <section class="contact" id="contact">
+              </div>
 
-    <h2 class="section-title">Let's Connect</h2>
 
-    <p>
-      I'd love to connect, collaborate, or simply have a conversation.
-    </p>
+              <div className="project-card">
 
-    <!-- Email -->
-    <a href="mailto:hanzcagungao12@email.com" class="btn">
-      Send an Email to me
-    </a>
+                <div className="project-icon">🚀</div>
 
+                <h3>Future Project</h3>
 
-    <!-- Social Media Links -->
-    <div class="social-links">
+                <p>
+                  Future projects where I can apply my growing
+                  programming and IT skills.
+                </p>
 
-      <!-- Facebook -->
-      <a 
-        href="https://www.facebook.com/share/1FCMapfq5F/" 
-        target="_blank"
-        rel="noopener noreferrer">
-        Facebook
-      </a>
+                <a href="#projects" className="project-btn">
+                  Coming Soon
+                </a>
 
-      <!-- Instagram -->
-      <a 
-        href="https://www.instagram.com/this_is_hanzzzzz" 
-        target="_blank"
-        rel="noopener noreferrer">
-        Instagram
-      </a>
+              </div>
 
-    </div>
+            </div>
 
-  </section>
+          </section>
 
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2026 Hanz "POGI" Cagungao. All rights reserved.</p>
-  </footer>
+          {/* Contact */}
+          <section className="contact" id="contact">
+
+            <h2 className="section-title">Let's Connect</h2>
+
+            <p>
+              I'd love to connect, collaborate, or simply have a conversation.
+            </p>
+
+            <button
+              className="btn"
+              onClick={showMessage}
+            >
+              Say Hello 👋
+            </button>
+
+            {/* JavaScript-generated message */}
+            {message && (
+              <p style={{ marginTop: "20px", color: "#60a5fa" }}>
+                {message}
+              </p>
+            )}
+
+            <div className="social-links">
+
+              <a
+                href="https://www.facebook.com/share/1FCMapfq5F/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Facebook
+              </a>
+
+              <a
+                href="https://www.instagram.com/this_is_hanzzzzz"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Instagram
+              </a>
+
+            </div>
+
+          </section>
+
+
+          {/* Footer */}
+          <footer>
+            <p>
+              © 2026 Hanz "POGI" Cagungao. All rights reserved.
+            </p>
+          </footer>
+
+        </>
+      );
+    }
+
+
+    // Start React application
+    const root = ReactDOM.createRoot(
+      document.getElementById("root")
+    );
+
+    root.render(<Portfolio />);
+
+  </script>
 
 </body>
 </html>
