@@ -166,6 +166,63 @@
       margin-bottom: 8px;
     }
 
+    /* Projects */
+    .projects {
+      background: #f5f7fb;
+    }
+
+    .project-container {
+      max-width: 1000px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+    }
+
+    .project-card {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+      transition: 0.3s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+    }
+
+    .project-icon {
+      font-size: 45px;
+      margin-bottom: 15px;
+    }
+
+    .project-card h3 {
+      color: #2563eb;
+      margin-bottom: 12px;
+      font-size: 22px;
+    }
+
+    .project-card p {
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    .project-btn {
+      display: inline-block;
+      padding: 9px 20px;
+      background: #2563eb;
+      color: white;
+      text-decoration: none;
+      border-radius: 20px;
+      transition: 0.3s;
+    }
+
+    .project-btn:hover {
+      background: #1d4ed8;
+    }
+
     /* Contact */
     .contact {
       background: #111827;
@@ -212,6 +269,10 @@
         padding: 15px 5%;
       }
 
+      .logo {
+        font-size: 18px;
+      }
+
       nav ul {
         gap: 12px;
         font-size: 13px;
@@ -236,12 +297,13 @@
 
   <!-- Navigation -->
   <nav>
-    <div class="logo">Hanz Christian C. Cagungao</div>
+    <div class="logo">Hanz Cagungao</div>
 
     <ul>
       <li><a href="#home">Home</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
@@ -285,9 +347,10 @@
       <p>
         Hello! I'm <strong>Hanz Christian C. Cagungao</strong>.
         A 20-year-old Bachelor of Science in Information Technology student
-        with a passion for technology, creativity, and continuous learning.<br>
-        I am a motivated and passionate individual with a strong
-        interest in <strong>the IT Industry</strong>.
+        with a passion for technology, creativity, and continuous learning.
+        I am a motivated and passionate individual with a strong interest
+        in <strong>the IT Industry</strong>.
+      </p>
 
       <br>
 
@@ -298,28 +361,29 @@
         positively to the people and communities around me.
       </p>
 
-       <br>
+      <br>
 
-      
       <p>
-        I am a motivated and curious person who enjoys exploring new technologies and developing my skills.
-        I believe that every challenge is an opportunity to learn and improve.
-      </p> 
+        I am a motivated and curious person who enjoys exploring new
+        technologies and developing my skills. I believe that every
+        challenge is an opportunity to learn and improve.
+      </p>
 
       <br>
 
       <p>
         Although I am still building my experience,
-        I am always willing to learn, adapt, 
+        I am always willing to learn, adapt,
         and take on new challenges.
       </p>
 
       <br>
 
       <p>
-        My goal is to become a skilled and successful IT professional who can use technology to create useful solutions and make a positive impact.
-        I am excited to continue growing, gaining experience, and turning my ideas into reality.
-        I may still be at the beginning of my journey, but I am ready to learn, grow, and build my future in technology.
+        My goal is to become a skilled and successful IT professional
+        who can use technology to create useful solutions and make a
+        positive impact. I am excited to continue growing, gaining
+        experience, and turning my ideas into reality.
       </p>
 
     </div>
@@ -352,6 +416,63 @@
       <div class="skill">
         <h3>Sports</h3>
         <p>Swimming, basketball, badminton and cycling.</p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- Projects Section -->
+  <section class="projects" id="projects">
+
+    <h2 class="section-title">My Projects</h2>
+
+    <div class="project-container">
+
+      <!-- Project 1 -->
+      <div class="project-card">
+        <div class="project-icon">💻</div>
+
+        <h3>Personal Website</h3>
+
+        <p>
+          A personal portfolio website created to introduce myself,
+          showcase my skills, and share my journey as an IT student.
+        </p>
+
+        <a href="#" class="project-btn">View Project</a>
+      </div>
+
+
+      <!-- Project 2 -->
+      <div class="project-card">
+        <div class="project-icon">🌐</div>
+
+        <h3>Web Development Project</h3>
+
+        <p>
+          A simple web development project created while learning
+          HTML, CSS, and the fundamentals of building websites.
+        </p>
+
+        <a href="#" class="project-btn">View Project</a>
+      </div>
+
+
+      <!-- Project 3 -->
+      <div class="project-card">
+        <div class="project-icon">🚀</div>
+
+        <h3>Future Project</h3>
+
+        <p>
+          A future project where I plan to apply my growing
+          programming and IT skills to create something useful
+          and innovative.
+        </p>
+
+        <a href="#" class="project-btn">Coming Soon</a>
       </div>
 
     </div>
@@ -400,7 +521,7 @@
 
   <!-- Footer -->
   <footer>
-    <p>© 2026 Hanz Cagungao. All rights reserved.</p>
+    <p>© 2026 Hanz "POGI" Cagungao. All rights reserved.</p>
   </footer>
 
 </body>
