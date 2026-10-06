@@ -6,11 +6,8 @@
 
   <title>Hanz Cagungao Personal Profile</title>
 
-  <!-- React.js -->
   <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
   <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-
-  <!-- Babel allows JSX to work in the browser -->
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
   <style>
@@ -28,7 +25,6 @@
       background: #f5f7fb;
     }
 
-    /* Navigation */
     nav {
       position: fixed;
       top: 0;
@@ -38,7 +34,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
       z-index: 1000;
     }
 
@@ -58,13 +54,13 @@
       text-decoration: none;
       color: #333;
       font-weight: 500;
+      transition: 0.3s;
     }
 
     nav a:hover {
       color: #2563eb;
     }
 
-    /* Hero */
     .hero {
       min-height: 100vh;
       display: flex;
@@ -85,7 +81,7 @@
       border-radius: 50%;
       object-fit: cover;
       border: 5px solid white;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
       margin-bottom: 25px;
     }
 
@@ -125,7 +121,6 @@
       transform: translateY(-2px);
     }
 
-    /* Sections */
     section {
       padding: 90px 8%;
     }
@@ -145,7 +140,6 @@
       color: #555;
     }
 
-    /* Skills */
     .skills {
       background: white;
     }
@@ -168,7 +162,7 @@
 
     .skill:hover {
       transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
     }
 
     .skill h3 {
@@ -176,7 +170,6 @@
       margin-bottom: 8px;
     }
 
-    /* Projects */
     .projects {
       background: #f5f7fb;
     }
@@ -194,13 +187,13 @@
       padding: 30px;
       border-radius: 15px;
       text-align: center;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
       transition: 0.3s;
     }
 
     .project-card:hover {
       transform: translateY(-7px);
-      box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
     }
 
     .project-icon {
@@ -233,7 +226,6 @@
       background: #1d4ed8;
     }
 
-    /* Contact */
     .contact {
       background: #111827;
       color: white;
@@ -273,7 +265,6 @@
       font-size: 14px;
     }
 
-    /* Mobile */
     @media (max-width: 700px) {
       nav {
         padding: 15px 5%;
@@ -305,20 +296,14 @@
 
 <body>
 
-  <!-- React will display the website here -->
   <div id="root"></div>
 
-
-  <!-- React + JavaScript -->
   <script type="text/babel">
 
-    // React component
     function Portfolio() {
 
-      // JavaScript state
       const [message, setMessage] = React.useState("");
 
-      // JavaScript function
       function showMessage() {
         setMessage("Thank you for visiting my portfolio! 🚀");
       }
@@ -326,9 +311,10 @@
       return (
         <>
 
-          {/* Navigation */}
           <nav>
-            <div className="logo">Hanz Cagungao</div>
+            <div className="logo">
+              Hanz Cagungao
+            </div>
 
             <ul>
               <li><a href="#home">Home</a></li>
@@ -339,8 +325,6 @@
             </ul>
           </nav>
 
-
-          {/* Hero Section */}
           <section className="hero" id="home">
 
             <div className="hero-content">
@@ -369,11 +353,11 @@
 
           </section>
 
-
-          {/* About */}
           <section id="about">
 
-            <h2 className="section-title">About Me</h2>
+            <h2 className="section-title">
+              About Me
+            </h2>
 
             <div className="about">
 
@@ -411,11 +395,11 @@
 
           </section>
 
-
-          {/* Skills */}
           <section className="skills" id="skills">
 
-            <h2 className="section-title">My Skills</h2>
+            <h2 className="section-title">
+              My Skills
+            </h2>
 
             <div className="skill-container">
 
@@ -451,23 +435,28 @@
 
           </section>
 
-
-          {/* Projects */}
           <section className="projects" id="projects">
 
-            <h2 className="section-title">My Projects</h2>
+            <h2 className="section-title">
+              My Projects
+            </h2>
 
             <div className="project-container">
 
               <div className="project-card">
 
-                <div className="project-icon">💻</div>
+                <div className="project-icon">
+                  💻
+                </div>
 
-                <h3>Personal Website</h3>
+                <h3>
+                  Personal Portfolio Website
+                </h3>
 
                 <p>
                   A personal portfolio website created to introduce
-                  myself and showcase my skills as an IT student.
+                  myself and showcase my skills, interests, and journey
+                  as an Information Technology student.
                 </p>
 
                 <a href="#home" className="project-btn">
@@ -476,41 +465,69 @@
 
               </div>
 
-
               <div className="project-card">
 
+                <div className="project-icon">
+                  🌐
+                </div>
 
-                <h3>Web Development</h3>
+                <h3>
+                  Web Development Project
+                </h3>
 
                 <p>
-                  A simple website created while learning HTML,
-                  CSS, JavaScript, and MIT web app development.
+                  A simple web development project created while
+                  learning HTML, CSS, JavaScript, and web development
+                  fundamentals.
                 </p>
 
+                <a href="#projects" className="project-btn">
+                  View Project
+                </a>
 
               </div>
 
+              <div className="project-card">
+
+                <div className="project-icon">
+                  🏫
+                </div>
+
+                <h3>
+                  NVSU Website
+                </h3>
+
+                <p>
+                  A simple NVSU website featuring a login form and
+                  registration form. This project helped me practice
+                  HTML, CSS, JavaScript, and web application development.
+                </p>
+
+                <a href="#projects" className="project-btn">
+                  View Project
+                </a>
+
+              </div>
 
               <div className="project-card">
 
-                
-                <h3>Future Project</h3>
+                <div className="project-icon">
+                  🚀
+                </div>
+
+                <h3>
+                  Future Project
+                </h3>
 
                 <p>
                   Future projects where I can apply my growing
-                  programming and IT skills.
+                  programming knowledge and create useful and
+                  innovative solutions.
                 </p>
 
-
-                <h3>A simple NVSU Website that has a log in form and REGIstration form</h3>
-
-                <p>
-                  A simple website created while learning HTML,
-                  CSS, JavaScript, and MIT web app development.
-                </p>
-
-               
-               
+                <a href="#projects" className="project-btn">
+                  Coming Soon
+                </a>
 
               </div>
 
@@ -518,14 +535,15 @@
 
           </section>
 
-
-          
           <section className="contact" id="contact">
 
-            <h2 className="section-title">Let's Connect</h2>
+            <h2 className="section-title">
+              Let's Connect
+            </h2>
 
             <p>
-              I'd love to connect, collaborate, or simply have a conversation.
+              I'd love to connect, collaborate, or simply have
+              a conversation.
             </p>
 
             <button
@@ -535,9 +553,13 @@
               Say Hello 👋
             </button>
 
-           
             {message && (
-              <p style={{ marginTop: "20px", color: "#60a5fa" }}>
+              <p
+                style={{
+                  marginTop: "20px",
+                  color: "#60a5fa"
+                }}
+              >
                 {message}
               </p>
             )}
@@ -564,11 +586,10 @@
 
           </section>
 
-
-          {/* Footer */}
           <footer>
             <p>
-              © 2026 Hanz "POGI" Cagungao. All rights reserved.
+              © 2026 Hanz "POGI" Cagungao.
+              All rights reserved.
             </p>
           </footer>
 
@@ -576,13 +597,13 @@
       );
     }
 
-
-    // Start React application
     const root = ReactDOM.createRoot(
       document.getElementById("root")
     );
 
-    root.render(<Portfolio />);
+    root.render(
+      <Portfolio />
+    );
 
   </script>
 
